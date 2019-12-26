@@ -1,0 +1,68 @@
+body {
+  padding: 70px;
+}
+
+.ui-kit-sircles {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin-bottom: 80px;
+}
+
+.ui-kit-sircles__item {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.ui-kit-text {
+  margin-bottom: 80px;
+}
+
+.ui-kit-text * {
+  margin-bottom: 20px;
+}
+
+.ui-kit-checkboxes {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.ui-kit-checkboxes__item {
+  margin-right: 57px;
+  width: 330px;
+}
+
+.ui-kit-checkboxes__item:last-child {
+  margin: 0;
+}
+
+.ui-kit-buttons {
+  display: flex;
+  margin-bottom: 110px;
+}
+
+.ui-kit-buttons__item {
+  margin-right: 40px;
+}
+
+.ui-kit-buttons__item-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.ui-kit-inputs {
+  display: flex;
+}
+
+.ui-kit-inputs__item {
+  width: 250px;
+  margin-right: 40px;
+}
+
+.ui-kit-inputs__item-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
