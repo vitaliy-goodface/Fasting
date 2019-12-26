@@ -55,16 +55,16 @@
 
   /* Хедер квиза */
 
-  .quiz-header {
+  .header {
     padding: 0;
     background-color: #F5EEDD;
   }
 
-  .quiz-header:after {
+  .header:after {
     display: none !important;
   }
 
-  .quiz-header__container {
+  .header__container {
     padding: 0;
     width: 560px;
     height: auto;
@@ -72,33 +72,33 @@
     padding: 24px 0px 40px 0px;
   }
 
-  .quiz-header__prev {
+  .header__prev {
     display: flex;
     align-items: center;
     width: auto;
   }
 
-  .quiz-header__prev:after {
+  .header__prev:after {
     content: attr(data-text);
     display: block;
     margin-left: 10px;
-    font-size: 11.4px;
+    font-size: 12px;
     text-transform: uppercase;
     font-family: 'Muli_Bold';
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
   }
 
-  .quiz-header__prev-icon {
+  .header__prev-icon {
     width: 27px;
     transition: 0.4s;
   }
 
-  .quiz-header__logo {
+  .header__logo {
     width: 100px;
     max-width: none;
   }
 
-  .quiz-header__burger-icon {
+  .header__burger-icon {
     width: 24px;
   }
 
@@ -212,12 +212,13 @@
 
   .quiz-description {
     width: 560px;
-    padding: 20px 0px 0px 0px;
+    padding: 7px 0px 0px 0px;
     margin: auto;
   }
 
   .quiz-checkboxes .checkbox {
     margin-bottom: 16px;
+    padding-left: 24px;
   }
 
   .quiz-checkboxes .checkbox:last-child {
@@ -244,6 +245,7 @@
 
   .quiz-checkboxes_square .checkbox_square {
     width: 156px;
+    height: 156px;
     margin-bottom: 15px;
   }
 
@@ -492,11 +494,19 @@
     margin: auto;
   }
 
+  .white-block-page {
+    width: 375px;
+    margin: 132px auto 0px auto;
+    height: auto;
+    border-radius: 15px;
+    padding-bottom: 24px;
+  }
+
 }
 
 @media (min-width: 1024px) {
 
-  .quiz-header {
+  .header {
     width: 900px;
     margin: auto;
   }
@@ -515,7 +525,6 @@
     display: block;
     position: relative;
     top: 0px;
-    border: 1px solid #000;
     width: 100%;
   }
 
@@ -527,13 +536,23 @@
     display: none;
   }
 
-  .quiz-header__container {
+  .header__container {
     width: 880px;
+  }
+
+  .quiz-description {
+    padding-top: 0px;
+    margin-top: -15px;
   }
 
   .checkbox:hover {
     background-color: #B9F8C0;
   }
+
+  .checkbox_square:hover .checkbox__icon {
+    opacity: 0.17;
+  }
+  
 
   .button:hover {
     background-color: #47484B;
@@ -551,7 +570,7 @@
     background-color: #8C76ED;
   }
 
-  .quiz-header__prev:hover .quiz-header__prev-icon {
+  .header__prev:hover .header__prev-icon {
     -webkit-transform: translateX(-8px);
     transform: translateX(-8px);
   }
@@ -569,9 +588,9 @@
   .right-plate {
     display: block;
     position: fixed;
+    z-index: -1;
     top: 0;
     bottom: 0;
-    z-index: 9;
     display: flex;
     align-items: center;
   }
@@ -594,8 +613,26 @@
     display: none;
   }
 
+  .quiz-block-preview_main-block {
+    display: block;
+  }
+
+  .quiz-block-preview__caption {
+    transform: translateY(0px);
+    margin: -80px 0px 40px 0px;
+  }
+
+  .quiz-content__inner p br {
+    display: block;
+  }
+
   .main-container {
     width: 806px;
+  }
+
+  .final-page-header__button {
+    font-size: 14px;
+    font-family: 'Muli_SemiBold';
   }
 
   .final-page-caption {
@@ -796,6 +833,10 @@
 
   .questions__list-item-description {
     max-height: 400px;
+  }
+
+  .white-block-page {
+    margin-top: 165px;
   }
 
 }

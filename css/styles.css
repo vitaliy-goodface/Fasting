@@ -34,6 +34,7 @@ a {
 img {
   border: none;
   -webkit-user-drag: none;
+  perspective: 1px;
 }
 
 svg {
@@ -45,6 +46,13 @@ svg {
 button {
   border: none;
   max-width: 100%;
+}
+
+body.no-scroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
 }
 
 .page {
@@ -268,8 +276,9 @@ button {
   width: 100%;
   height: 48px;
   border-radius: 100px;
-  font-family: 'Muli_Bold';
   font-size: 14px;
+  letter-spacing: 2px;
+  text-indent: 1px;
   color: #fff;
   background-color: #242933;
   text-transform: uppercase;
@@ -306,6 +315,10 @@ button {
 
 .input {
   position: relative;
+  display: flex;
+  align-content: space-between;
+  flex-direction: row-reverse;
+  padding-bottom: 22px;
 }
 
 .input:before {
@@ -316,37 +329,38 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 56px;
+  height: 54px;
   padding-right: 16px;
   color: #6b6b6b;
+  border: 1px solid #DDDDDD;
+  border-left: none;
+  border-radius: 0px 8px 8px 0px;
 }
 
 .input:after {
   content: attr(data-error-text);
-  display: block;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   color: #eb5757;
   font-size: 12px;
   font-family: 'Muli_Bold';
   margin-top: 8px;
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .input_input {
   display: block;
-  width: 100%;
   border: 1px solid #DDDDDD;
-  border-radius: 8px;
+  border-right: none;
+  border-radius: 8px 0px 0px 8px;
   height: 56px;
   width: 100%;
   font-family: 'Muli_SemiBold';
   font-size: 16px;
-  padding: 0px 68px 0px 16px;
+  padding: 0px 16px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -383,9 +397,12 @@ button {
   border-color: #EB5757;
 }
 
+.input_error:before {
+  border-color: #EB5757;
+}
+
 .input_error:after {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .white-block {
@@ -396,7 +413,7 @@ button {
 
 /* Quiz header */
 
-.quiz-header {
+.header {
   position: fixed;
   z-index: 8;
   top: 0;
@@ -407,7 +424,7 @@ button {
   transition: 0.4s;
 }
 
-.quiz-header__container {
+.header__container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,18 +438,18 @@ button {
   height: 64px;
 }
 
-.quiz-header__logo {
+.header__logo {
   display: table;
   margin: auto;
   max-width: 75px;
 }
 
-.quiz-header__logo-icon {
+.header__logo-icon {
   display: block;
   width: 100%;
 }
 
-.quiz-header__prev {
+.header__prev {
   position: absolute;
   left: 0;
   width: 24px;
@@ -442,17 +459,17 @@ button {
   cursor: pointer;
 }
 
-.quiz-header__prev-icon {
+.header__prev-icon {
   width: 24px;
 }
 
-.quiz-header__burger {
+.header__burger {
   position: absolute;
   right: 0;
   cursor: pointer;
 }
 
-.quiz-header__burger-icon {
+.header__burger-icon {
   width: 20px;
 }
 
@@ -469,15 +486,15 @@ button {
 }
 
 .quiz-line__line {
-  padding: 2px;
   border-radius: 20px;
   background-color: #fff;
+  border: solid 2px #fff;
   margin-bottom: 12px;
+  overflow: hidden;
 }
 
 .quiz-line__line-progress {
   height: 4px;
-  border-radius: 10px;
   background-color: #0DB874;
   width: 0%;
   transition: 1s;
@@ -621,6 +638,10 @@ button {
   padding-bottom: 37px;
 }
 
+.quiz-content__inner p br {
+  display: none;
+}
+
 .quiz-content-header {
   padding-top: 23px;
   margin-bottom: 20px;
@@ -671,6 +692,7 @@ button {
 
 .quiz-checkboxes_square .checkbox_square {
   width: calc(50% - 6px);
+  height: calc((100vw - 48px - 12px) / 2);
 }
 
 /* Quiz description */
@@ -782,12 +804,28 @@ button {
   margin-bottom: 6px;
 }
 
-/* Email */
+/* Quiz menu pages */
 
 .mobile-white-content {
   margin-top: 64px;
   height: calc(100vh - 64px);
   overflow: auto;
+}
+
+.white-block-page {
+  margin-top: 64px;
+  padding-top: 24px;
+  height: calc(100vh - 64px);
+  background-color: #fff;
+  border-radius: 35px 35px 0px 0px;
+}
+
+.white-block-page .emoji {
+  margin-bottom: 5px;
+}
+
+.white-block-page .quiz-content-header:last-child {
+  margin-bottom: 0;
 }
 
 /* Loader */
@@ -891,7 +929,7 @@ button {
   height: 30px;
   width: 112px;
   font-size: 11px;
-  font-family: 'Muli_SemiBold';
+  font-family: 'Muli_Bold';
 }
 
 .page-progress {
@@ -1495,6 +1533,106 @@ button {
   padding: 92px 16px 0px 16px;
 }
 
+/* Прайсинг */
+
+.pricing-slider__title {
+  text-align: center;
+  padding: 0px 50px;
+  margin-bottom: 24px;
+}
+
+.pricing-slider__item {
+  display: block;
+  width: 297px;
+  background-color: #fff;
+  border-radius: 6px;
+  height: 424px;
+  padding: 24px 32px;
+  color: #242933;
+}
+
+.pricing-slider__item_black {
+  background-color: #242933;
+  color: #fff;
+  font-family: 'Muli_Regular';
+}
+
+.pricing-slider__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 21px;
+}
+
+.pricing-slider__item-header-title {
+  font-family: 'Muli_Bold';
+  font-size: 14px;
+}
+
+.pricing-slider__item-header-icons {
+  display: flex;
+  align-items: flex-start;
+}
+
+.pricing-slider__item-header-icons img {
+  display: block;
+  width: 16px;
+  margin-left: 4px;
+}
+
+.pricing-slider__irem-weight {
+  font-family: 'Muli_ExtraBold';
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+.pricing-slider__list-item-info {
+  font-size: 13px;
+  min-height: 180px;
+}
+
+.pricing-slider__list-item-info li {
+  position: relative;
+  padding-left: 27px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.pricing-slider__list-item-info li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  background-image: url(../images/icons/checkmark-black.svg);
+}
+
+.pricing-slider__list-item-info li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  background-image: url(../images/icons/checkmark-white.svg);
+}
+
+.pricing-slider__list-item-info .disabled {
+  opacity: 0.2;
+  text-decoration: line-through;
+}
+
+.pricing-slider__item-price {
+  text-align: center;
+  font-family: 'Muli_Bold';
+  font-size: 29px;
+  line-height: 36px;
+  margin-bottom: 14px;
+}
+
 /* Fonts */
 
 @font-face {
@@ -1515,4 +1653,9 @@ button {
 @font-face {
   font-family: 'Muli_Black';
   src: url(../fonts/Muli_Black.woff);
+}
+
+@font-face {
+  font-family: 'Muli_ExtraBold';
+  src: url(../fonts/Muli_ExtraBold.woff);
 }

@@ -81,6 +81,48 @@ $(document).ready(function () {
 
       $('.hide-menu-bg').toggleClass('hide-menu-bg_active');
       $('.hide-menu').toggleClass('hide-menu_active');
+      blockBody();
+
+    });
+
+  }
+
+  function blockBody() {
+
+    if ($('body').hasClass('no-scroll')) {
+
+      let scrollTop = $('body').attr('data-scroll');
+
+      $('body').removeClass('no-scroll');
+      $(document).scrollTop(scrollTop);
+
+    } else {
+
+      let scrollTop = $(document).scrollTop();
+
+      $('body').addClass('no-scroll');
+      $('body').css({
+        top: '-' + scrollTop + 'px'
+      });
+      $('body').attr('data-scroll', scrollTop);
+
+    }
+
+  }
+
+
+
+  // Отключение кнопки в чекбоксах
+
+  if ($('.button-for-checkboxes').length) {
+
+    $('.checkbox').click(function () {
+
+      if ($('.checkbox_checked').length == 0) {
+        $('.button-for-checkboxes').addClass('button_disabled');
+      } else {
+        $('.button-for-checkboxes').removeClass('button_disabled');
+      }
 
     });
 
@@ -122,7 +164,7 @@ $(window).on('scroll', function () {
     hideFinalHeader(scrollTop);
   }
 
-  // Прячем шапку финала при скроллинге
+  // Анимация графика
 
   if ($('.final-schedule').length) {
     fillSchedule(scrollTop);
@@ -296,7 +338,7 @@ if ($('.animate-num').length) {
 
       let toTop = $(this).offset().top;
       let elementHeight = $(this).height();
-      let scrollCalculate = toTop - windowHeight + elementHeight + 20;
+      let scrollCalculate = toTop - windowHeight + elementHeight;
 
       if (scroll > scrollCalculate) {
 
@@ -305,8 +347,8 @@ if ($('.animate-num').length) {
         let num = +$(this).attr('data-num');
         var speed = 3000;
 
-        if (num < 10 && (num ^ 0) === num) {
-          speed = 500;
+        if (num < 10 && (num ^ 0) !== num || num < 10) {
+          speed = 1000;
         }
 
         $(this).prop('Counter', 0).animate({
@@ -329,12 +371,12 @@ if ($('.animate-num').length) {
 
   }
 
-}
+  function roundPlus(x, n) {
+    if (isNaN(x) || isNaN(n)) return false;
+    var m = Math.pow(10, n);
+    return Math.round(x * m) / m;
+  }
 
-function roundPlus(x, n) {
-  if (isNaN(x) || isNaN(n)) return false;
-  var m = Math.pow(10, n);
-  return Math.round(x * m) / m;
 }
 
 
@@ -359,9 +401,9 @@ if ($('.more-info-button').length) {
 
 if ($('.final-schedule').length) {
 
-  let finalScheduleOffset = $('.final-schedule').offset().top;
-  let finalScheduleHeight = $('.final-schedule').height();
-  let returnFinalSchedule = false;
+  var finalScheduleOffset = $('.final-schedule-nums').offset().top;
+  var finalScheduleHeight = $('.final-schedule-nums').height();
+  var returnFinalSchedule = false;
 
   function fillSchedule(scroll) {
 
@@ -407,9 +449,9 @@ if ($('.final-schedule').length) {
 
 if ($('.bmi__small-sircle').length) {
 
-  let BMIOffset = $('.bmi__half-circle-container').offset().top;
-  let BMIHeight = $('.bmi__half-circle-container').height();
-  let returnBMI = false;
+  var BMIOffset = $('.bmi__half-circle-container').offset().top;
+  var BMIHeight = $('.bmi__half-circle-container').height();
+  var returnBMI = false;
 
   var counter = 0;
 
@@ -464,8 +506,8 @@ if ($('.bmi__small-sircle').length) {
 
 if ($('.final-page-header').length) {
 
-  let getPlanButtonOffset = $('.get-a-plan').offset().top;
-  let getPlanButtonHeight = $('.get-a-plan').height();
+  var getPlanButtonOffset = $('.get-a-plan').offset().top;
+  var getPlanButtonHeight = $('.get-a-plan').height();
 
   function hideFinalHeader(scroll) {
 
