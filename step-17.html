@@ -10,7 +10,6 @@
 
   <meta charset="utf-8">
 
-  <link href="https://fonts.googleapis.com/css?family=Muli:500,600,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/adaptive.css">
@@ -28,164 +27,161 @@
 
 <body class="quiz-body">
 
-  <div class="page">
-
-    <div class="left-plate">
-      <img src="images/steps_previews/2.png" alt="">
-    </div>
-
-    <div class="right-plate">
-      <img src="images/steps_previews/12.png" alt="">
-    </div>
-
-    <div class="hide-menu-bg"></div>
-
-    <div class="hide-menu">
-      <div class="hide-menu__close open-menu">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1.63605" y="0.221802" width="20" height="2" rx="1" transform="rotate(45 1.63605 0.221802)"
-            fill="#242933" />
-          <rect y="14.1422" width="20" height="2" rx="1" transform="rotate(-45 0 14.1422)" fill="#242933" />
+  <header class="header">
+    <div class="header__container">
+      <div class="header__prev" data-text="Previous">
+        <svg class="header__prev-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.41 13.41">
+          <polyline fill="none" stroke="#242933" stroke-width="2" points="7.41 0.71 1.41 6.71 7.41 12.71" />
+          <line fill="none" stroke="#242933" stroke-width="2" x1="25.41" y1="6.71" x2="1.06" y2="6.71" />
         </svg>
       </div>
-      <ul class="hide-menu__list">
-        <li class="hide-menu__list-item">
-          <a href="#" class="hide-menu__list-item-link">
-            FAQ
-          </a>
-        </li>
-        <li class="hide-menu__list-item">
-          <a href="#" class="hide-menu__list-item-link">
-            General Conditions
-          </a>
-        </li>
-        <li class="hide-menu__list-item">
-          <a href="#" class="hide-menu__list-item-link">
-            Data protection policy
-          </a>
-        </li>
-        <li class="hide-menu__list-item">
-          <a href="#" class="hide-menu__list-item-link">
-            Cookie policy
-          </a>
-        </li>
-        <li class="hide-menu__list-item">
-          <a href="#" class="hide-menu__list-item-link">
-            Contacts
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <header class="header">
-      <div class="header__container">
-        <div class="header__prev" data-text="Previous">
-          <svg class="header__prev-icon" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 25.41 13.41">
-            <polyline fill="none" stroke="#242933" stroke-width="2" points="7.41 0.71 1.41 6.71 7.41 12.71" />
-            <line fill="none" stroke="#242933" stroke-width="2" x1="25.41" y1="6.71" x2="1.06" y2="6.71" />
-          </svg>
-        </div>
-        <a href="#" class="header__logo">
-          <img src="images/logo.svg" alt="" class="header__logo-icon">
-        </a>
-        <div class="header__burger open-menu">
-          <svg class="header__burger-icon" xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 22.02 15.99">
-            <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1.02" y1="1" x2="21.02" y2="1" />
-            <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1.02" y1="8" x2="21.02" y2="8" />
-            <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1" y1="14.99" x2="21" y2="14.99" />
-          </svg>
-        </div>
+      <a href="#" class="header__logo">
+        <img src="images/logo.svg" alt="" class="header__logo-icon">
+      </a>
+      <div class="header__burger open-menu">
+        <svg class="header__burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.02 15.99">
+          <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1.02" y1="1" x2="21.02"
+            y2="1" />
+          <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1.02" y1="8" x2="21.02"
+            y2="8" />
+          <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1" y1="14.99" x2="21"
+            y2="14.99" />
+        </svg>
       </div>
-      <div class="quiz-line" data-active-step="17" data-steps-count="18">
-        <div class="quiz-line__line">
-          <div class="quiz-line__line-progress"></div>
-        </div>
-        <p class="quiz-line__status bold">
-          Step <span class="quiz-step-active"></span> of <span class="quiz-steps-count"></span>
+    </div>
+    <div class="quiz-line" data-active-step="17" data-steps-count="18">
+      <div class="quiz-line__line">
+        <div class="quiz-line__line-progress"></div>
+      </div>
+      <p class="quiz-line__status bold">
+        Step <span class="quiz-step-active"></span> of <span class="quiz-steps-count"></span>
+      </p>
+    </div>
+  </header>
+
+  <div class="quiz-block-preview">
+    <div class="container">
+      <img src="images/steps_previews/17.png" alt="" class="quiz-block-preview__image">
+    </div>
+  </div>
+
+  <div class="quiz-content quiz-white-block">
+    <div class="quiz-content__inner container">
+      <div class="quiz-content-header">
+        <h2 class="quiz-content-header__title bold">
+          Products
+        </h2>
+        <p class="quiz-content-header__description">
+          Select which products you would like to be included
         </p>
       </div>
-    </header>
-
-    <div class="quiz-block-preview">
-      <div class="container">
-        <img src="images/steps_previews/17.png" alt="" class="quiz-block-preview__image">
-      </div>
-    </div>
-
-    <div class="quiz-content quiz-white-block">
-      <div class="quiz-content__inner container">
-        <div class="quiz-content-header">
-          <h2 class="quiz-content-header__title bold">
-            Products
-          </h2>
-          <p class="quiz-content-header__description">
-            Select which products you would like to be included
+      <div class="quiz-checkboxes quiz-checkboxes_square checkboxes">
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/10.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Potato
           </p>
         </div>
-        <div class="quiz-checkboxes quiz-checkboxes_square checkboxes">
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/10.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Potato
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/7.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Peas
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/13.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Quinoa
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/9.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Rice
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/14.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Mushrooms
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/12.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Couscous
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/1.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Rice
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/8.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Mushrooms
-            </p>
-          </div>
-          <div class="checkbox checkbox_square checkbox_multiple">
-            <img src="images/checkboxes_products/15.png" alt="" class="checkbox__icon">
-            <p class="checkbox__title bold-default">
-              Couscous
-            </p>
-          </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/7.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Peas
+          </p>
         </div>
-        <button class="button button_disabled button-for-checkboxes">
-          Next step
-        </button>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/13.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Quinoa
+          </p>
+        </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/9.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Rice
+          </p>
+        </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/14.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Mushrooms
+          </p>
+        </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/12.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Couscous
+          </p>
+        </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/1.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Rice
+          </p>
+        </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/8.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Mushrooms
+          </p>
+        </div>
+        <div class="checkbox checkbox_square checkbox_multiple">
+          <img src="images/checkboxes_products/15.png" alt="" class="checkbox__icon">
+          <p class="checkbox__title bold-default">
+            Couscous
+          </p>
+        </div>
       </div>
+      <button class="button button_disabled button-for-checkboxes">
+        Next step
+      </button>
     </div>
+  </div>
 
+  <div class="left-plate">
+    <img src="images/steps_previews/2.png" alt="">
+  </div>
+
+  <div class="right-plate">
+    <img src="images/steps_previews/12.png" alt="">
+  </div>
+
+  <div class="hide-menu-bg"></div>
+
+  <div class="hide-menu">
+    <div class="hide-menu__close open-menu">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1.63605" y="0.221802" width="20" height="2" rx="1" transform="rotate(45 1.63605 0.221802)"
+          fill="#242933" />
+        <rect y="14.1422" width="20" height="2" rx="1" transform="rotate(-45 0 14.1422)" fill="#242933" />
+      </svg>
+    </div>
+    <ul class="hide-menu__list">
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          FAQ
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          General Conditions
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          Data protection policy
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          Cookie policy
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          Contacts
+        </a>
+      </li>
+    </ul>
   </div>
 
   <script src="js/jquery-3.4.1.min.js"></script>

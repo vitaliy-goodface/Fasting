@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+  <title>
+    Fasting
+  </title>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/adaptive.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="manifest" href="images/favicon/fasting.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  <!-- mobile -->
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__prev" data-text="Back">
+        <svg class="header__prev-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.41 13.41">
+          <polyline fill="none" stroke="#242933" stroke-width="2" points="7.41 0.71 1.41 6.71 7.41 12.71" />
+          <line fill="none" stroke="#242933" stroke-width="2" x1="25.41" y1="6.71" x2="1.06" y2="6.71" />
+        </svg>
+      </div>
+      <a href="#" class="header__logo">
+        <img src="images/logo.svg" alt="" class="header__logo-icon">
+      </a>
+      <div class="header__burger open-menu">
+        <svg class="header__burger-icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 22.02 15.99">
+          <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1.02" y1="1" x2="21.02"
+            y2="1" />
+          <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1.02" y1="8" x2="21.02"
+            y2="8" />
+          <line fill="none" stroke="#242933" stroke-linecap="round" stroke-width="2" x1="1" y1="14.99" x2="21"
+            y2="14.99" />
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <div class="thanks-page">
+
+    <div class="white-block">
+      <div class="quiz-content-header">
+        <h2 class="quiz-content-header__title bold">
+          Thank you! Payment successfully processed
+        </h2>
+        <p class="quiz-content-header__description">
+          Now please save this unique link to your plan:
+        </p>
+      </div>
+      <div class="input input_clear input-link-container" data-sucsess-text="Link copied!">
+        <input type="text" class="input_input input-link" value="https://us.bodyfitplan.me/meal/lgWbeRIGpxXVLXQ1u5tfein" disabled>
+      </div>
+      <button class="button copy-link">
+        Copy link
+      </button>
+      <button class="button button_green open-window-phones">
+        Send via sms
+      </button>
+    </div>
+
+    <p class="thanks-page__text">
+      We have also sent a backup email to <span class="color-green">example@gmail.com</span>. If it's not there, check
+      SPAM folder
+    </p>
+
+    <div class="white-block enter-account-info">
+      <div class="emoji bg-light-blue">
+        <img src="images/icons/key.png" alt="" class="emoji__icon">
+      </div>
+      <h2 class="h2 bold center">
+        To enter account from any device:
+      </h2>
+      <ul class="enter-account-info__list">
+        <li>
+          Click top-right menu <img src="images/icons/elements.svg" alt="">
+        </li>
+        <li>
+          Go to ‘My meal plan’
+        </li>
+        <li>
+          Enter your email to instantly access your meal plan on this website
+        </li>
+      </ul>
+      <p class="thanks-page__small-text">
+        Log into your PayPal account to view transaction details
+      </p>
+    </div>
+
+  </div>
+
+  <div class="hide-menu-bg"></div>
+
+  <div class="hide-menu">
+    <div class="hide-menu__close open-menu">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1.63605" y="0.221802" width="20" height="2" rx="1" transform="rotate(45 1.63605 0.221802)"
+          fill="#242933" />
+        <rect y="14.1422" width="20" height="2" rx="1" transform="rotate(-45 0 14.1422)" fill="#242933" />
+      </svg>
+    </div>
+    <ul class="hide-menu__list">
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          FAQ
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          General Conditions
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          Data protection policy
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          Cookie policy
+        </a>
+      </li>
+      <li class="hide-menu__list-item">
+        <a href="#" class="hide-menu__list-item-link">
+          Contacts
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="windows">
+    <div class="windows__inner">
+      <div class="window phone-window white-block">
+        <div class="close"></div>
+        <p class="phone-window__description">
+          Enter your phone number to receive sms with a link to your meal plan
+        </p>
+        <div class="countries-input">
+          <div class="countries-input__open-area">
+            <img src="images/flags/Argentina.png" alt="">
+            <p>
+              +54
+            </p>
+          </div>
+          <input type="tel" class="countries-input__input num">
+        </div>
+        <ul class="countries-list">
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Argentina.png" alt="">
+              <p>
+                +54
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Argentina
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Australia.png" alt="">
+              <p>
+                +61
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Australia
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Austria.png" alt="">
+              <p>
+                +43
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Austria
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Belgium.png" alt="">
+              <p>
+                +32
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Belgium
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Brazil.png" alt="">
+              <p>
+                +55
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Brazil
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Canada.png" alt="">
+              <p>
+                +1
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Canada
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Chile.png" alt="">
+              <p>
+                +56
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Chile
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Colombia.png" alt="">
+              <p>
+                +57
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Colombia
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Dominican_Republic.png" alt="">
+              <p>
+                +1-809
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Dominican Republic
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/France.png" alt="">
+              <p>
+                +33
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              France
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Germany.png" alt="">
+              <p>
+                +49
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Germany
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Greece.png" alt="">
+              <p>
+                +30
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Greece
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Hungary.png" alt="">
+              <p>
+                +36
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Hungary
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/India.png" alt="">
+              <p>
+                +91
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              India
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Indonesia.png" alt="">
+              <p>
+                +62
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Indonesia
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Ireland.png" alt="">
+              <p>
+                +353
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Ireland
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Israel.png" alt="">
+              <p>
+                +972
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Israel
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Italy.png" alt="">
+              <p>
+                +39
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Italy
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Kazakhstan.png" alt="">
+              <p>
+                +7
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Kazakhstan
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Malaysia.png" alt="">
+              <p>
+                +60
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Malaysia
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Malta.png" alt="">
+              <p>
+                +356
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Malta
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Mexico.png" alt="">
+              <p>
+                +1-706
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Mexico
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Mexico.png" alt="">
+              <p>
+                +1-905
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Mexico
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Mexico.png" alt="">
+              <p>
+                +52
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Mexico
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Netherlands.png" alt="">
+              <p>
+                +31
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Netherlands
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/New_Zealand.png" alt="">
+              <p>
+                +64
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              New Zealand
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Norway.png" alt="">
+              <p>
+                +47
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Norway
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Peru.png" alt="">
+              <p>
+                +51
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Peru
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Philippines.png" alt="">
+              <p>
+                +63
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Philippines
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Portugal.png" alt="">
+              <p>
+                +351
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Portugal
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Puerto_Rico.png" alt="">
+              <p>
+                +1-787
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Puerto Rico
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Romania.png" alt="">
+              <p>
+                +40
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Romania
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Russia.png" alt="">
+              <p>
+                +7
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Russia
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Singapore.png" alt="">
+              <p>
+                +65
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Singapore
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Slovenia.png" alt="">
+              <p>
+                +386
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Slovenia
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/South_Africa.png" alt="">
+              <p>
+                +27
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              South Africa
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Spain.png" alt="">
+              <p>
+                +34
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Spain
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Switzerland.png" alt="">
+              <p>
+                +41
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Switzerland
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Ukraine.png" alt="">
+              <p>
+                +38
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Ukraine
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/United_Kingdom.png" alt="">
+              <p>
+                +44
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              United Kingdom
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/United_States.png" alt="">
+              <p>
+                +1
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              United States
+            </p>
+          </li>
+          <li class="countries-list__item">
+            <div class="countries-list__country">
+              <img src="images/flags/Uruguay.png" alt="">
+              <p>
+                +598
+              </p>
+            </div>
+            <p class="countries-list__country-title">
+              Uruguay
+            </p>
+          </li>
+        </ul>
+        <input type="submit" class="button" value="Confirm">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

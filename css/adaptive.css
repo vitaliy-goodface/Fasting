@@ -22,6 +22,34 @@
     font-size: 25px;
   }
 
+  .countries-list {
+    height: 78px;
+  }
+
+  .phone-window_active .countries-list {
+    height: 112px;
+  }
+
+  .phone-window_active .button {
+    margin-bottom: 34px;
+  }
+
+}
+
+@media screen and (min-width: 760px) and (orientation: landscape) {
+
+  .mobile-white-content {
+    margin-bottom: 50px !important;
+  }
+
+  .white-block-page {
+    margin-bottom: 50px !important;
+  }
+
+  .questions {
+    margin-bottom: 0 !important;
+  }
+
 }
 
 @media (min-width: 760px) {
@@ -69,7 +97,7 @@
     width: 560px;
     height: auto;
     margin: auto;
-    padding: 24px 0px 40px 0px;
+    padding: 24px 0px 24px 0px;
   }
 
   .header__prev {
@@ -497,9 +525,167 @@
   .white-block-page {
     width: 375px;
     margin: 132px auto 0px auto;
+    min-height: auto;
     height: auto;
     border-radius: 15px;
     padding-bottom: 24px;
+  }
+
+  /* Pricing */
+
+  .pricing-slider {
+    margin: 132px 0px 48px 0px;
+  }
+
+  .pricing-slider .h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .pricing-page-container {
+    width: 618px;
+    margin: auto;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .pricing-page-container .white-block {
+    padding: 40px 40px 15px 40px;
+    margin-bottom: 48px;
+  }
+
+  .pricing-page-container .emoji {
+    margin-bottom: 24px;
+  }
+
+  .pricing-page-container .quiz-content-header__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .pricing-page-container .quiz-content-header__description {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Muli_Regular';
+  }
+
+  .pricing-page-container .h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .secure-by__list {
+    margin: 0px 10px -8px 10px;
+  }
+
+  .secure-by__item {
+    width: 25%;
+    margin-bottom: 32px;
+  }
+
+  /* Windows */
+
+  .window-email {
+    width: 560px;
+    border-radius: 15px;
+    padding: 8px 40px 32px 40px;
+  }
+
+  .windows__inner .close {
+    top: 24px;
+    right: 24px;
+    transition: 0.4s;
+  }
+
+  .windows__inner .close:hover {
+    transform: rotate(90deg);
+  }
+
+  .window-email .quiz-content-header {
+    margin-bottom: 24px;
+  }
+
+  /* Thanks page */
+
+  .thanks-page {
+    width: 560px;
+    margin: auto;
+    padding: 135px 0px 69px 0px;
+  }
+
+  .thanks-page .white-block {
+    border-radius: 15px;
+    padding: 0px 40px 32px 40px;
+    margin-bottom: 23px;
+  }
+
+  .thanks-page .input {
+    margin-bottom: 11px;
+  }
+
+  .input_sucsess:after {
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
+
+  .thanks-page .button {
+    width: 327px;
+    margin: 0px auto 24px auto;
+  }
+
+  .thanks-page .quiz-content-header {
+    padding-top: 35px;
+    margin-bottom: 23px;
+  }
+
+  .thanks-page .quiz-content-header__title {
+    margin-bottom: 10px;
+  }
+
+  .thanks-page__text {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .enter-account-info {
+    padding: 40px 40px 33px 40px !important;
+  }
+
+  .enter-account-info .emoji {
+    margin: 0px auto 32px auto;
+  }
+
+  .enter-account-info .h2 {
+    margin-bottom: 30px;
+  }
+
+  /* Countries window */
+
+  .phone-window {
+    width: 560px;
+    padding: 52px 40px 24px 40px;
+    border-radius: 15px;
+  }
+
+  .phone-window__description {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+
+  .countries-list {
+    left: 40px;
+    right: 40px;
+  }
+
+  .countries-input__input {
+    width: 398px;
+  }
+
+  /* Other */
+
+  .loader {
+    padding-bottom: 0;
   }
 
 }
@@ -507,7 +693,8 @@
 @media (min-width: 1024px) {
 
   .header {
-    width: 900px;
+    width: 100%;
+    max-width: 1140px;
     margin: auto;
   }
 
@@ -552,7 +739,7 @@
   .checkbox_square:hover .checkbox__icon {
     opacity: 0.17;
   }
-  
+
 
   .button:hover {
     background-color: #47484B;
@@ -837,6 +1024,157 @@
 
   .white-block-page {
     margin-top: 165px;
+  }
+
+  /* Pricing */
+
+  .pricing-page-container {
+    padding-bottom: 100px;
+  }
+
+  .pricing-slider {
+    margin: 138px 0px 40px 0px;
+  }
+
+  .pricing-slider .h2 {
+    margin-bottom: 33px;
+  }
+
+  .pricing-slider__list .slick-slide {
+    margin: 0px 15px;
+  }
+
+  .pricing-slider__item {
+    width: 360px;
+    padding: 30px 0px 40px 0px;
+  }
+
+  .pricing-slider__item-header {
+    margin: 0px 40px 11px 32px;
+  }
+
+  .pricing-slider__item-header-title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .pricing-slider__item-header-icons img {
+    width: 24px;
+    margin-left: 4px;
+  }
+
+  .pricing-slider__irem-weight {
+    font-size: 36px;
+    line-height: 64px;
+    margin: 0px 32px 14px 32px;
+  }
+
+  .pricing-slider__list-item-info {
+    margin: 0px 33px;
+    min-height: 215px;
+  }
+
+  .pricing-slider__list-item-info li {
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 30px;
+    margin-bottom: 3px;
+  }
+
+  .pricing-slider__list-item-info li:before {
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    background-size: 100% auto;
+  }
+
+  .pricing-slider__item-price {
+    font-size: 36px;
+    line-height: 65px;
+    margin-bottom: 13px;
+  }
+
+  .pricing-slider__item-price span {
+    top: -42px;
+    font-size: 16px;
+    line-height: 64px;
+  }
+
+  .pricing-slider__item .button {
+    font-size: 14px;
+  }
+
+  .pricing-page-container {
+    width: 806px;
+  }
+
+  .pricing-page-container .white-block {
+    margin-bottom: 40px;
+  }
+
+  .pricing-page-container .emoji {
+    margin-bottom: 26px;
+  }
+
+  .pricing-page-container .quiz-content-header__title {
+    margin-bottom: 18px;
+  }
+
+  .pricing-page-container .quiz-content-header__description {
+    margin-bottom: 1px;
+  }
+
+  .pricing-page-container .h2 {
+    margin-bottom: 42px;
+  }
+
+  .secure-by__list {
+    margin: 0px -22px;
+  }
+
+  .secure-by__item {
+    width: 16.66%;
+  }
+
+  /* Thanks page */
+
+  .thanks-page {
+    padding-top: 170px;
+  }
+
+  .enter-account-info {
+    padding-bottom: 40px !important;
+  }
+
+  .enter-account-info__list {
+    margin-bottom: 16px;
+  }
+
+  /* Phone window */
+
+  .countries-list__item {
+    transition: 0.4s;
+  }
+
+  .countries-list__item:hover {
+    background-color: #E1FFE4;
+  }
+
+}
+
+@media (min-width: 1260px) {
+
+  .pricing-slider__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pricing-slider__item {
+    margin: 0px 15px;
+  }
+
+  .pricing-slider__description {
+    padding-top: 26px;
   }
 
 }
