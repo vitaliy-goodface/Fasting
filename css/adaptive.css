@@ -1847,6 +1847,10 @@
     padding: 40px 0px 32px 0px;
   }
 
+  .select-payment-method__card {
+    font-family: 'Muli_Bold';
+  }
+
   .payment-frame {
     margin: 40px 0px;
   }
