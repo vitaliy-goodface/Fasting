@@ -1,10 +1,10 @@
-$(window).resize(function() {
+$(window).resize(function () {
   // Прогресс скроллинга страницы
 
   scrollProgress();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   // Прогресс скроллинга страницы
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
   // Чекбоксы
 
   if ($(".checkbox").length) {
-    $(".checkbox").click(function() {
+    $(".checkbox").click(function () {
       if (!$(this).hasClass("checkbox_multiple")) {
         $(this)
           .closest(".checkboxes")
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
   // Ввод только чисел
 
-  $(".num").bind("change keyup input click", function(event) {
+  $(".num").bind("change keyup input click", function (event) {
     let val = $(this).val();
 
     if (event.keyCode == 48) {
@@ -72,7 +72,7 @@ $(document).ready(function() {
   // Боковое меню
 
   if ($(".open-menu").length) {
-    $(".open-menu, .hide-menu-bg").click(function() {
+    $(".open-menu, .hide-menu-bg").click(function () {
       $(".hide-menu-bg").toggleClass("hide-menu-bg_active");
       $(".hide-menu").toggleClass("hide-menu_active");
       blockBody();
@@ -84,7 +84,7 @@ $(document).ready(function() {
   // Отключение кнопки в чекбоксах
 
   if ($(".button-for-checkboxes").length) {
-    $(".checkbox").click(function() {
+    $(".checkbox").click(function () {
       if ($(".checkbox_checked").length == 0) {
         $(".button-for-checkboxes").addClass("button_disabled");
       } else {
@@ -112,13 +112,13 @@ $(document).ready(function() {
 
   // Закрытие окон
 
-  $('.windows').on('click', '.close', function() {
+  $(".windows .close").click(function () {
     closeWindow();
   });
 
-  $(document).mouseup(function(e) {
+  $(document).mouseup(function (e) {
 
-    var element = $('.window-area');
+    var element = $('.window');
 
     if (!element.is(e.target) && element.has(e.target).length === 0) {
 
@@ -127,7 +127,7 @@ $(document).ready(function() {
     }
   });
 
-  $(".windows__thanks-content .button").click(function() {
+  $(".windows__thanks-content .button").click(function () {
     closeWindow();
   });
 
@@ -135,7 +135,7 @@ $(document).ready(function() {
 
   // Копия ссылки из инпута
 
-  $('.copy-link').click(function() {
+  $('.copy-link').click(function () {
 
     let copyText = '<input id="copyText" value="' + $('.input-link').val() + '">';
     $('body').append(copyText);
@@ -153,13 +153,13 @@ $(document).ready(function() {
 
   // Открытие списка стран
 
-  $('.countries-input__open-area').click(function() {
+  $('.countries-input__open-area').click(function () {
 
     $('.phone-window').toggleClass('phone-window_active');
 
   });
 
-  $(document).mouseup(function(e) {
+  $(document).mouseup(function (e) {
 
     var element = $('.countries-input__open-area');
 
@@ -174,7 +174,7 @@ $(document).ready(function() {
 
   // Выбор страны в выпадающем списке
 
-  $('.countries-list__item').click(function() {
+  $('.countries-list__item').click(function () {
 
     let src = $(this).find('img').attr('src');
     let code = $(this).find('.countries-list__country p').text().trim();
@@ -188,234 +188,20 @@ $(document).ready(function() {
 
   // Открыть окно с выбором телефонов
 
-  $('.open-window-phones').click(function() {
+  $('.open-window-phones').click(function () {
     showWindow('.phone-window');
-  });
-
-
-
-  // Переключение дней недели
-
-  $('.meal-plan-weeks__days-list-item').click(function() {
-    $(this).siblings('li').removeClass('meal-plan-weeks__days-list-item_active');
-    $(this).addClass('meal-plan-weeks__days-list-item_active');
-  });
-
-
-  // Выпадающий список
-
-  if ($('.select').length) {
-
-    $('.select').click(function() {
-      $(this).toggleClass('select_active');
-    });
-
-    $('.select__list li').click(function() {
-
-      let val = $(this).text().trim();
-
-      $(this).closest('.select').find('.select__value p').html(val);
-
-    });
-
-    $(document).mouseup(function(e) {
-      var element = $('.select');
-      if (!element.is(e.target) && element.has(e.target).length === 0) {
-        $('.select').removeClass('select_active');
-      }
-    });
-
-  }
-
-
-  // Переключение дней
-
-  if ($('.days-list').length) {
-
-    $('.days-list li').click(function() {
-
-      if ($(this).hasClass('days-list__active')) {
-        return;
-      }
-
-      $(this).siblings('.days-list__active').removeClass('days-list__active');
-      $(this).addClass('days-list__active');
-
-    });
-
-  }
-
-
-  // Открытие рицепта
-
-  $('.recipe__button').click(function() {
-
-    let button = $(this);
-    let content = $(this).closest('.recipe').find('.recipe__hide-content');
-
-    if (button.hasClass('recipe__button_active')) {
-      button.removeClass('recipe__button_active');
-    } else {
-      button.addClass('recipe__button_active');
-    }
-
-    content.slideToggle(500);
-
-  });
-
-
-  // Выбор недели
-
-  if ($('.meal-plan__weeks').length) {
-
-    $('.select__list li').click(function() {
-
-      let index = $(this).index();
-
-      $('.meal-plan__week-item_active').removeClass('meal-plan__week-item_active');
-      $('.meal-plan__week-item').eq(index).addClass('meal-plan__week-item_active');
-
-    });
-
-  }
-
-
-  // Выбор дня
-
-  if ($('.days').length) {
-
-    $('.days-list li').click(function() {
-
-      let index = $(this).index();
-      let days = $(this).closest('.meal-plan__week-item').find('.days__item');
-
-      days.removeClass('days__item_active');
-      days.eq(index).addClass('days__item_active');
-
-    });
-
-  }
-
-
-  // Открытие таблиц
-
-  if ($('.tables__button').length) {
-
-    $('.tables__button').click(function() {
-
-      let tablesContainer = $(this).closest('.tables').find('.tables-content');
-      let tablesHeight = 0;
-
-      tablesContainer.find('.table-container').each(function(element, i) {
-
-        let height = $(this).outerHeight(true);
-        tablesHeight += height;
-
-      });
-
-      if ($(this).hasClass('tables__button_active')) {
-
-        tablesContainer.attr('style', '');
-
-        $('.tables-content').removeClass('tables-content_active');
-        $(this).removeClass('tables__button_active');
-
-      } else {
-
-        tablesContainer.css({
-          height: tablesHeight + 'px'
-        });
-
-        $('.tables-content').addClass('tables-content_active');
-        $(this).addClass('tables__button_active');
-
-      }
-
-    });
-
-  }
-
-
-
-  // Ховер блюд в милплане на PC
-
-  if ($('.days__item').length) {
-
-    $('.days__item .recipe').mouseover(function() {
-
-      if (window.innerWidth >= 1024) {
-
-        let daysList = $(this).closest('.days');
-        let recipesList = $(this).closest('.days__item');
-        let recipeIndex = $(this).index();
-        let dayIndex = $(this).closest('.days__item').index();
-
-        $(this).addClass('recipe-hover');
-        $('.meal-plan__recipes-captions p').eq(recipeIndex).addClass('recipe-hover');
-        $('.meal-plan__days-captions div').eq(dayIndex).addClass('recipe-hover');
-
-        for (let i = 0; i < recipeIndex; i++) {
-          recipesList.find('.recipe').eq(i).addClass('recipe-hover');
-        }
-
-        for (let i = 0; i < dayIndex; i++) {
-          daysList.find('.days__item').eq(i).find('.recipe').eq(recipeIndex).addClass('recipe-hover');
-        }
-
-      }
-
-    });
-
-    $('.days__item .recipe').mouseout(function() {
-
-      $('.recipe, .meal-plan__recipes-captions p, .meal-plan__days-captions div').removeClass('recipe-hover');
-
-    });
-
-  }
-
-
-
-  // Открытие окна при выборе блюда в милплане на PC
-
-  $('.days__item .recipe').click(function() {
-
-    if (window.innerWidth > 1024) {
-
-      let thisHTML = $(this).clone();
-
-      $('.recipe-window').html(thisHTML);
-
-      $('.recipe-window .recipe').addClass('window-area');
-      $('.recipe-window .recipe').prepend('<div class="close"></div>');
-
-      showWindow('.recipe-window');
-
-    }
-
-  });
-
-
-
-  // Выбор типа оплаты
-
-  $('.select-payment-method__card').click(function () {
-
-    $('.select-payment-method').css({display: 'none'});
-    $('.payment-frame').addClass('payment-frame_active');
-
   });
 
 
 });
 
-$(window).on("load", function() {
+$(window).on("load", function () {
   if ($("#loader").length) {
     fillCircle();
   }
 
   if ($(".quiz-line").length) {
-    setTimeout(function() {
+    setTimeout(function () {
       quizLineStatus();
     }, 100);
   }
@@ -423,7 +209,7 @@ $(window).on("load", function() {
   $(window).scroll();
 });
 
-$(window).on("scroll", function() {
+$(window).on("scroll", function () {
   let scrollTop = $(this).scrollTop();
 
   // Прогресс скроллинга страницы
@@ -462,7 +248,7 @@ $(window).on("scroll", function() {
 // Переключение вкладок
 
 if ($(".tabs__menu-item").length > 1) {
-  $(".tabs__menu-item").click(function() {
+  $(".tabs__menu-item").click(function () {
     if ($(this).hasClass("tabs__menu-item_active")) {
       return;
     }
@@ -532,7 +318,7 @@ function fillCircle() {
       textCount = $(".loader__list-item").length - 1,
       piceCount = Math.floor(100 / textCount);
 
-    let fillPath = setInterval(function() {
+    let fillPath = setInterval(function () {
       if (offset <= 100) {
         $path.attr(
           "stroke-dasharray",
@@ -576,7 +362,7 @@ function scrollProgress() {
 
 // Скролл до кнопки
 
-$(".scrollToPlane").click(function(e) {
+$(".scrollToPlane").click(function (e) {
   e.preventDefault();
 
   let elementHeight = $(".get-a-plan").height();
@@ -594,12 +380,10 @@ $(".scrollToPlane").click(function(e) {
 // Анимация чисел при скролинге
 
 if ($(".animate-num").length) {
-
   function animateNumbers(scroll) {
-
     let windowHeight = window.innerHeight;
 
-    $(".animate-num").each(function() {
+    $(".animate-num").each(function () {
       if ($(this).hasClass("return")) {
         return;
       }
@@ -625,20 +409,16 @@ if ($(".animate-num").length) {
           }, {
             duration: speed,
             easing: "swing",
-            step: function(now) {
+            step: function (now) {
               if ((num ^ 0) !== num) {
                 $(this).text(roundPlus(now, 1).toFixed(1));
               } else {
                 $(this).text(Math.ceil(now));
               }
             }
-
           });
-
       }
-
     });
-
   }
 
   function roundPlus(x, n) {
@@ -651,13 +431,13 @@ if ($(".animate-num").length) {
 // Открытие доп информации в финале
 
 if ($(".more-info-button").length) {
-  $(".more-info-button").click(function() {
+  $(".more-info-button").click(function () {
     $(this)
       .siblings(".hide-info")
       .addClass("hide-info_active");
   });
 
-  $(".hide-info__close").click(function() {
+  $(".hide-info__close").click(function () {
     $(this)
       .closest(".hide-info")
       .removeClass("hide-info_active");
@@ -689,7 +469,7 @@ if ($(".final-schedule").length) {
         pathLength = Math.round($path.get(0).getTotalLength()),
         offset = 1;
 
-      let fillPath = setInterval(function() {
+      let fillPath = setInterval(function () {
         if (offset <= 100) {
           $path.attr(
             "stroke-dasharray",
@@ -778,7 +558,7 @@ if ($(".final-page-header").length) {
 // FAQ
 
 if ($(".questions__list-item").length) {
-  $(".questions__list-item-title").click(function() {
+  $(".questions__list-item-title").click(function () {
     if ($(".questions__list-item-title").hasClass("return")) {
       return;
     } else {
@@ -803,7 +583,7 @@ if ($(".questions__list-item").length) {
           height: "hide"
         },
         400,
-        function() {
+        function () {
           $(this).removeClass("opened_description");
           title.removeClass("return");
         }
@@ -820,7 +600,7 @@ if ($(".questions__list-item").length) {
         height: "show"
       },
       400,
-      function() {
+      function () {
         $(this).addClass("opened_description");
         title.removeClass("return");
       }
@@ -878,7 +658,7 @@ function scrollAnimation(scroll) {
 
   let windowHeight = window.innerHeight;
 
-  $(".animate").each(function(index, element) {
+  $(".animate").each(function (index, element) {
     if ($(this).hasClass("return")) {
       return;
     }
@@ -892,7 +672,7 @@ function scrollAnimation(scroll) {
   });
 
   if (window.innerWidth < 760) {
-    $(".animate-mobile").each(function(index, element) {
+    $(".animate-mobile").each(function (index, element) {
       if ($(this).hasClass("return")) {
         return;
       }
@@ -915,12 +695,12 @@ function showWindow(name) {
 
   $(".windows").animate({
     opacity: "show"
-  }, 350, function() {
+  }, 350, function () {
 
     $(name).animate({
         opacity: "show"
       }, 350,
-      function() {
+      function () {
         $(this).addClass("opened-window");
       }
     );
@@ -933,23 +713,25 @@ function closeWindow() {
 
   $(".opened-window").animate({
     opacity: "hide"
-  }, 350, function() {
+  }, 350, function () {
 
     $(this).removeClass("opened-window");
 
     $(".windows").animate({
-      opacity: "hide"
-    }, 350, function() {
-      if ($(".windows__thanks-content").length) {
-        $(".windows__thanks-content").css({
-          display: "none"
-        });
-        $(".window-email__content").css({
-          display: "block"
-        });
+        opacity: "hide"
+      }, 350,
+      function () {
+        if ($(".windows__thanks-content").length) {
+          $(".windows__thanks-content").css({
+            display: "none"
+          });
+          $(".window-email__content").css({
+            display: "block"
+          });
+        }
+        blockBody();
       }
-      blockBody();
-    });
+    );
 
   });
 
@@ -959,7 +741,7 @@ function thanksForEmail() {
 
   $(".window-email__content").animate({
     opacity: "hide"
-  }, 350, function() {
+  }, 350, function () {
 
     $(".windows__thanks-content").animate({
       opacity: "show"
